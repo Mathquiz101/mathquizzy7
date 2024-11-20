@@ -3,18 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Functions: Understanding Linear and Quadratic Functions Quiz - 60s Per Question</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Rock Paper Scissors</h1>
-        <div class="choices">
-            <button onclick="playGame('rock')">Rock</button>
-            <button onclick="playGame('paper')">Paper</button>
-            <button onclick="playGame('scissors')">Scissors</button>
+    <div class="quiz-container">
+        <h1 style="text-align: center;">Functions: Understanding Linear and Quadratic Functions Quiz</h1>
+        <div id="start-screen">
+            <h2>Test your knowledge!</h2>
+            <p>You have 60 seconds for each question.</p>
+            <p>Total questions: 10</p>
+            <button id="start-btn">Start Quiz</button>
         </div>
-        <p id="result">Make your choice!</p>
+        <div id="quiz-screen" class="hide">
+            <div class="timer">Time left: 60s</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="question-number"></div>
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <button id="next-btn" class="hide">Next Question</button>
+        </div>
+        <div id="result-screen" class="hide">
+            <div class="result"></div>
+            <div id="next-level-container" class="hide next-level-link">
+                <h3>🎉 Congratulations! You've Unlocked Level 8! 🎉</h3>
+                <p>Your special access link to Level 8:</p>
+                <a href="#" id="next-level-link" target="_blank"></a>
+                <br>
+                <button class="copy-btn" onclick="copyLink()">Copy Link</button>
+                <div class="save-reminder">
+                    ⚠️ Important: Save this link! Without it, you won't be able to access Level 8 materials.
+                </div>
+            </div>
+            <button id="restart-btn" onclick="location.reload()">Restart Quiz</button>
+        </div>
+
+        <!-- Donate Section -->
+        <div class="donate-section">
+            <h2>Please Donate</h2>
+            <p>Your support helps us create more challenging content for advanced learning.</p>
+            <div class="donate-info">
+                <!-- Wave Donation Option -->
+                <div class="donation-method">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX1j8_1o20igEk7AJyDYrJ_cH3dBXBr6jwuw&usqp=CAU" alt="Wave Logo" class="wave-logo">
+                    <p>Wave Phone Number: <strong>3709558</strong></p>
+                </div>
+                <!-- GTBank Donation Option -->
+                <div class="donation-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GTBank_logo.svg/2048px-GTBank_logo.svg.png" alt="GTBank Logo" class="gtbank-logo">
+                    <p>GTBank Account Number: <strong>2032202001590</strong></p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

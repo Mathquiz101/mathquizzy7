@@ -187,12 +187,56 @@ button:hover {
     text-align: center;
 }
 
-.wave-logo,
-.gtbank-logo {
-    width: 100px;
-    height: auto;
-    margin: 10px 0;
+.return-home-btn {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    text-decoration: none;
 }
+
+.return-home-btn:hover {
+    background-color: #1557b0;
+}
+
+
+
+
+.donate-banner {
+    position: fixed;
+    bottom: 10px; /* Adjust to place at the bottom of the viewport */
+    right: 10px;  /* Align to the right side */
+    background-color: #e74c3c; /* Eye-catching red */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.donate-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #c0392b; /* Darker red on hover */
+}
+
 
 .donation-method p {
     font-size: 1rem;
@@ -208,8 +252,4 @@ button:hover {
         gap: 10px;
     }
 
-    .wave-logo,
-    .gtbank-logo {
-        width: 80px;
-    }
-}
+    
